@@ -2,16 +2,17 @@
 // Wird ausgeführt, wenn webseite geladen hat.
 window.addEventListener('load', function () {
 
-  var kurs = 288.00;
+  getAppleData();
 
-  document.getElementByID("applekurs").innerHTML() = kurs;
-//getAppleData();
-  window.alert("Gruezi miteinond");
 });
 
 function getAppleData()
 {
-    var kurs = 288.00;
-    document.getElementByID("Applekurs").innerHTML = kurs;
+    var kurs = getElementByXpath('//*[@id="ShareQuotes_2"]/table/tbody/tr[1]/td[2]/text()');
+    window.alert(kurs);
+    document.getElementById("applekurs").innerHTML = kurs + "";
 }
-  window.alert("Gruezi miteinond");
+
+function getElementByXpath(path) {
+  return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+}
