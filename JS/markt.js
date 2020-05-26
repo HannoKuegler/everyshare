@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
 
   document.getElementByID("applekurs").innerHTML() = kurs;
 //getAppleData();
-  window.alert("Gruezi miteinond");
+  //window.alert("Gruezi miteinond");
 });
 
 function getAppleData()
@@ -14,4 +14,4 @@ function getAppleData()
     var kurs = 288.00;
     document.getElementByID("Applekurs").innerHTML = kurs;
 }
-  window.alert("Gruezi miteinond");
+  //window.alert("Gruezi miteinond");
