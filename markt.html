@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
     <title>everyshare</title>
 
-    <link rel="stylesheet" href="CSS/markt.css">
-    <script language="javascript" type="text/javascript" src="JS/markt.js"></script>
+    <!-- Festlegen der Unicode-Kodierung -->
+      <meta charset="utf-8">
 
+    <!-- Implementierung von Bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+    <!-- Rendering und Zoom für Mobilgeräte -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Verlinkungen zu eigenen Skript und Stylesheet -->
+      <link rel="stylesheet" href="CSS/markt.css">
+      <script language="javascript" type="text/javascript" src="JS/markt.js"></script>
   </head>
+
+  <!-- Navigationsleiste -->
+  <nav class="navbar navbar-expand-md navbar-dark py-0 dots">
+    <a class="navbar-brand" href="#">
+      <img src="place-holder.png" width="170" height="45" alt="everyshare Logo">
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#">Portfolio</a>
+        <a class="nav-item nav-link" href="#">Aktien</a>
+      </div>
+    </div>
+</nav>
+
   <body>
-    <h1>Alle Daten der Aktien werden von der XETRA Börse bezogen.</h1>
+
+
     <button type="button"><a href="index.html">back to the game</a></button>
 
     <button type="button" class="buy" name="Buy"><b>Buy</b></button>
@@ -76,6 +96,6 @@
     </div>
 
 
-
+    <p class="untertitel">Die Aktiendaten werden von der XETRA Börse bezogen</p>
   </body>
 </html>

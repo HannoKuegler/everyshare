@@ -1,3 +1,9 @@
+/* Farbschema
+#f7fbfc
+#d6e6f2
+#b9d7ea
+#769fcd */
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -13,6 +19,29 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+.navbar.dots .navbar-toggler-icon {
+background-image: url('https://mdbootstrap.com/img/svg/hamburger9.svg?color=f7fbfc');
+background-color: #b9d7ea;
+}
+
+
+
+nav {
+  background-color: #b9d7ea;
+}
+
+body {
+ background-color: #f7fbfc;
+}
+
+.untertitel {
+  color: #769fcd;
+  font-size: 11px;
+  text-align: center;
+  padding-top: 10px;
+}
+
 /* Buttons */
 
     .buy {
