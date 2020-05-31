@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <title>Portfolio</title>
+
+  <!-- Festlegen der Unicode-Kodierung -->
+    <meta charset="utf-8">
+
+  <!-- Implementierung von Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Rendering und Zoom für Mobilgeräte -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Verlinkungen zu eigenen Skript und Stylesheet -->
+    <link rel="stylesheet" href="CSS/portfolio.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 </head>
+
+<!-- Navigationsleiste -->
+<nav class="navbar navbar-expand-md navbar-dark py-0 dots">
+  <a class="navbar-brand" href="#">
+    <img src="place-holder.png" width="170" height="45" alt="everyshare Logo">
+  </a>
+  <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#">Aktien</a>
+    </div>
+  </div>
+</nav>
+
 <body>
   <div class="container">
     <canvas id="myChart"></canvas>
@@ -16,46 +43,30 @@
   let myChart = document.getElementById('myChart').getContext('2d');
 
   // Global Options
-  Chart.defaults.global.defaultFontFamily = 'Lato';
+  Chart.defaults.global.defaultFontFamily = 'Arial';
   Chart.defaults.global.defaultFontSize = 18;
-  Chart.defaults.global.defaultFontColor = '#777';
+  Chart.defaults.global.defaultFontColor = '#769fcd';
 
   let portfolioChart = new Chart(myChart, {
-    type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+    type:'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
     data:{
-      labels:['Apple', 'Aktie X', 'Aktie Y', 'Aktie Z'],
+      labels:['Apple', 'SpaceX', 'Tesla', 'Microsoft'],
       datasets:[{
-        label:'Aktien',
-        data:[
-          1,
-          0.2,
-          0.4,
-          1.2,
-        ],
-        //backgroundColor:'green',
-        backgroundColor:[
-          'rgba(255, 99, 132, 0.6)',
-          'rgba(54, 162, 235, 0.6)',
-          'rgba(255, 206, 86, 0.6)',
-          'rgba(75, 192, 192, 0.6)',
-          'rgba(153, 102, 255, 0.6)',
-          'rgba(255, 159, 64, 0.6)',
-          'rgba(255, 99, 132, 0.6)'
-        ],
-        borderWidth:1,
-        borderColor:'#777',
-        hoverBorderWidth:3,
-        hoverBorderColor:'#000'
-      }]
-    },
+        label:'',
+        data:[1, 0.2, 0.4, 1.2],
+        backgroundColor:['rgba(118, 159, 205, 1)', 'rgba(185, 215, 234, 1)', 'rgba(118, 159, 205, 1)',
+          'rgba(185, 215, 234, 1)', 'rgba(153, 102, 255, 0.6)', 'rgba(255, 159, 64, 0.6)', 'rgba(255, 99, 132, 0.6)'],
+        borderWidth:0,
+        borderColor:'#ffffff',
+        hoverBorderWidth:2,
+        hoverBorderColor:'#769fcd'}]},
     options:{
       title:{
-        display:true,
-        text:'Aktien-Portfolio',
-        fontSize:70
-      },
+        display:false,
+        text:'',
+        fontSize:70 },
       legend:{
-        display:true,
+        display:false,
         position:'right',
         labels:{
           fontColor:'#000',
