@@ -2,3 +2,16 @@
   width: 600px;
   height: 600px;
 }
+
+.navbar.dots .navbar-toggler-icon {
+background-image: url('https://mdbootstrap.com/img/svg/hamburger9.svg?color=f7fbfc');
+background-color: #b9d7ea;
+}
+
+nav {
+  background-color: #b9d7ea;
+}
+
+body {
+ background-color: #f7fbfc;
+}
