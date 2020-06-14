@@ -1,0 +1,19 @@
+nav {
+  background-color: #b9d7ea;
+}
+
+body {
+ background-color: #f7fbfc;
+}
+
+.untertitel {
+  color: #769fcd;
+  font-size: 11px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.navbar.dots .navbar-toggler-icon {
+background-image: url('https://mdbootstrap.com/img/svg/hamburger9.svg?color=f7fbfc');
+background-color: #b9d7ea;
+}

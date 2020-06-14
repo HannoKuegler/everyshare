@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>easyshare</title>
+    <title>Overview</title>
+
+    <!-- Festlegen eines Browser-Logos -->
+      <link rel="icon" type="image/png" href="graphics/favicon.png">
+      <link rel="icon" type="image/vnd.microsoft.icon" href="graphics/favicon.ico">
+
+    <!-- Festlegen der Unicode-Kodierung -->
+      <meta charset="utf-8">
+
+    <!-- Implementierung von Bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Rendering und Zoom für Mobilgeräte -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Verlinkungen zu eigenen Skript und Stylesheet -->
+      <link rel="stylesheet" href="CSS/index.css">
+      <script type="text/javascript" src="JS/index.js" async></script>
   </head>
+
   <body>
-    <button type="button"><a href="markt.html">Auf zum Markt</a></button>
+    <!-- Navigationsleiste -->
+    <nav class="navbar navbar-expand-md navbar-dark py-0 dots">
+      <a class="navbar-brand" href="#">
+        <img src="graphics/place-holder.png" width="170" height="45" alt="everyshare">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="portfolio.html">Portfolio</a>
+          <a class="nav-item nav-link" href="markt.html">Aktien</a>
+        </div>
+      </div>
+  </nav>
   </body>
 </html>
