@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
   <!-- Implementierung von Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -24,27 +24,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 </head>
 
-<!-- Navigationsleiste -->
-<nav class="navbar navbar-expand-md navbar-dark py-0 dots">
-  <a class="navbar-brand" href="index.html">
-    <img src="graphics/place-holder.png" width="170" height="45" alt="everyshare Logo">
-  </a>
-  <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Portfolio</a>
-      <a class="nav-item nav-link" href="markt.html">Aktien</a>
+<body>
+  <!-- Navigationsleiste -->
+  <nav class="navbar sticky-top navbar-expand-md navbar-dark dots">
+    <a class="navbar-brand" href="index.html">
+      <img src="graphics/place-holder.png" width="170" height="45" alt="everyshare">
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Portfolio</a>
+        <a class="nav-item nav-link" href="aktienrechner.html">Rechner</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+  </div>
+
+
+  <div class="container-fluid straight">
+    <div class="row">
+      <div class="col-sm">
+        <canvas id="worthChart"></canvas>
+      </div>
+      <div class="col-sm">
+        <p>Doughnuts sind was tolles. Sie dienen aber auch zum Illustrieren von aktuellen Aktienwerten! <b>Hovern</b> oder <b>drücken</b> Sie auf einen beliebigen <b>Anteil</b> innerhalb des <b>Diagramms</b> um einen solchen Wert anzuzeigen.</p>
+      </div>
     </div>
   </div>
-</nav>
 
-<body>
-  <div class="container">
-    <canvas id="worthChart"></canvas>
-  </div>
-  <hr>
   <div class="container">
     <canvas id="difChart"></canvas>
   </div>

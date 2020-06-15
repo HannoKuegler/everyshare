@@ -1,17 +1,9 @@
-#chart{
-  width: 600px;
-  height: 600px;
-}
-
 .navbar.dots .navbar-toggler-icon {
 background-image: url('https://mdbootstrap.com/img/svg/hamburger9.svg?color=f7fbfc');
-background-color: #b9d7ea;
+background-color: #5277B7;
 }
 
-nav {
-  background-color: #b9d7ea;
-}
-
-body {
- background-color: #FFFFFF;
+.navbar {
+  background-color: #5277B7;
+	padding: 0px 0px 0px 9%;
 }

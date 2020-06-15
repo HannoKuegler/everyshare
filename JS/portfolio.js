@@ -21,8 +21,8 @@ let portfolioChart = new Chart(myChart, {
     datasets:[{
       label:'',
       data:[appleKurs, microsoftKurs, netflixKurs, cocacolaKurs],
-      backgroundColor:['rgba(118, 159, 205, 1)', 'rgba(185, 215, 234, 1)', 'rgba(118, 159, 205, 1)',
-        'rgba(185, 215, 234, 1)', 'rgba(153, 102, 255, 0.6)', 'rgba(255, 159, 64, 0.6)', 'rgba(255, 99, 132, 0.6)'],
+      backgroundColor:['rgba(169, 187, 219, 1)', 'rgba(226, 233, 243, 1)', 'rgba(140, 164, 207, 1)',
+        'rgba(82, 119, 183, 1)'],
       borderWidth:0,
       borderColor:'#ffffff',
       hoverBorderWidth:2,

@@ -23,8 +23,6 @@ background-color: #5277B7;
   -o-background-size: cover;
 }
 
-
-
 p {font-size: 16px;}
 
 h3 {
@@ -38,6 +36,7 @@ h3 {
   color: #406098;
 }
 .odd {
+  padding: 0% 10% 0% 10%;
   background-color: #FFFFFF;
   color: #406098;
 }
@@ -50,10 +49,6 @@ h3 {
   color: #fff;
 }
 .container-fluid {
-  padding-top: 50px;
-  padding-bottom: 60px;
-}
-.container-fluid2 {
   padding-top: 50px;
   padding-bottom: 60px;
 }

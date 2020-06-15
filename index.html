@@ -17,7 +17,7 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <!-- Rendering und Zoom für Mobilgeräte -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Verlinkungen zu eigenen Skript und Stylesheet -->
       <link rel="stylesheet" href="CSS/index.css">
@@ -43,54 +43,46 @@
 
   <!-- Header - set the background image for the header in the line below -->
   <header class="bg-image-full text-center" style="background-image: url('graphics/stock-market.jpg');">
-        <h1 style="padding-right: 500px;">Analysiere,</h1>
-        <h1 style="padding-right: 250px;">taxiere,</h1>
-        <h1>handle</h1>
+    <div style="padding: 7%;">
+    </div>
   </header>
 
-  <!-- First Container -->
-  <!-- <div class="container-fluid straight text-center">
-    <h1>Kaufe und verkaufe</h1>
-    <h3 style="margin-left: 250px;">... aber wann?</h3>
-    <p><b>everyshare</b> beantwortet diese Frage mit <b>Diagrammen</b> und <b>Aktienrechner</b>!</p>
-  </div> -->
 
-
-  <!-- Second Container -->
-  <div class="container-fluid odd text-center">
-    <h2 class="margin">Wer macht denn sowas?</h2>
+  <!-- Entwickler Vorstellung -->
+  <div class="container-fluid odd">
     <div class="row">
-      <div class="col-lg-4">
-        <img src="graphics\hanno.png" class="rounded-circle img-fluid" alt="Portrait von Hanno" width="250px" height="250px">
-        <h4 style="margin-top: 10px;">&lt;Back-End&gt;</h4>
-        <p>Direkt sehen kann man es zwar nicht, aber ohne ihn wäre hier nichts los. Er übernimmt vollste verantwortung für Funktion dieser Webseite!</p>
+      <div class="col-sm">
+        <img src="graphics\hanno.png" class="rounded-circle img-fluid" alt="Portrait von Hanno" width="200px" height="200px">
       </div>
-      <div class="col-lg-4">
-        <img src="graphics\Paul.png" class="rounded-circle img-fluid" alt="Portrait von Paul" width="250px" height="250px">
-        <h4 style="margin-top: 10px;">&lt;Front-End&gt;</h4>
-        <p>Funktionalität zu visualisieren ist seine Arbeit. Schön soll es aussehen, aber auch funktionieren!</p>
+      <div class="col-sm">
+        <h3 style="margin-top: 10px;">.backend {</h3>
+        <p>Direkt sehen kann man es zwar nicht, aber ohne ihn, wäre hier nichts los. <b>Hanno Kügler</b> ist hauptsächlich für den Hintergrund dieser Webseite tätig.</p>
+        <h3>}</h3>
       </div>
-      <div class="col-lg-4">
-        <img src="graphics\Paul.png" class="rounded-circle img-fluid" alt="Portrait von Paul" width="250px" height="250px">
-        <h4 style="margin-top: 10px;">&lt;Front-End&gt;</h4>
-        <p>Funktionalität zu visualisieren ist seine Arbeit. Schön soll es aussehen, aber auch funktionieren!</p>
+      <div class="col-sm">
+        <img src="graphics\Paul.png" class="rounded-circle img-fluid" alt="Portrait von Paul" width="200px" height="200px">
+      </div>
+      <div class="col-sm">
+        <h3 style="margin-top: 10px;">.frontend {</h3>
+        <p>Funktionalität zu visualisieren und sinnvoll anzuordnen ist seine Arbeit. <b>Paul Kleinlercher</b> ist für Design und Inhalt der Homepage verantwortlich.</p>
+        <h3>}</h3>
       </div>
     </div>
   </div>
 
-  <!-- Third Container (Grid) -->
+  <!-- Inhalt der Webseite -->
   <div class="container-fluid straight text-center">
-    <h3 class="margin">Was finde ich hier?</h3><br>
+    <h3 class="margin">Was finde ich hier?</h3>
     <div class="row">
-      <div class="col">
+      <div class="col-sm">
         <img style="margin-bottom: 10px" src="graphics\info.png" alt="" width="50px" height="50px">
-        <p>Verschaffe dir einen Überblick von der Seite, den Machern und der Entstehung der Webseite!</p>
+        <p>Verschaffe dir einen Überblick von der Seite, den Machern und lasse dich beeindrucken!</p>
       </div>
-      <div class="col">
+      <div class="col-sm">
         <img style="margin-bottom: 10px" src="graphics\calculator.png" alt="" width="50px" height="50px">
         <p>Errechne dir Gewinn und Verlust in Prozent und entscheide, ob ein Kauf oder Verkauf lohnenswert ist!</p>
       </div>
-      <div class="col">
+      <div class="col-sm">
         <img style="margin-bottom: 10px" src="graphics\diagram.png" alt="" width="50px" height="50px">
         <p>Mit einem Blick den Aktienmarkt visualisieren mit Diagrammen, statt Zahlen!</p>
       </div>
