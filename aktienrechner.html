@@ -10,7 +10,7 @@
   <body>
 
 
-
+  <h1>Aktienrechner</h1>
   <table border="0" cellspacing="2" cellpadding="2">
   <tbody><tr><td>Einkaufspreis: </td><td><input type="number" step="any" id="a" class="in"> (€) </td><td><input type="button" value="C" onclick="document.getElementById('a').value=''"></td></tr>
   <tr><td>Verkaufspreis: </td><td><input type="number" step="any" id="b" class="in"> (€) </td><td><input type="button" value="C" onclick="document.getElementById('b').value=''"></td></tr>
@@ -22,6 +22,22 @@
   <input type="button" value="Löschen" onclick="del()">
   <br>
   <br>
+  <h1>Zinsenrechner bezohen auf Monatliches Ausschüttungsintervall</h1>
+  <table border="0" cellspacing="2" cellpadding="2">
+  <tbody><tr><td>Anfangskapital: </td><td><input type="number" step="any" id="kapital" class="in"></td><td><input type="button" value="C" onclick="document.getElementById('kapital').value=''"></td></tr>
+  <tr><td>Monatliche Sparrate: </td><td><input type="number" step="any" id="sparrate" class="in"></td><td><input type="button" value="C" onclick="document.getElementById('sparrate').value=''"></td></tr>
+  <tbody><tr><td>Spardauer in Jahren: </td><td><input type="number" step="any" id="spardauer" class="in"></td><td><input type="button" value="C" onclick="document.getElementById('spardauer').value=''"></td></tr>
+  <tr><td>Jählricher Zinssatz in Prozent: </td><td><input type="number" step="any" id="zinssatz" class="in"></td><td><input type="button" value="C" onclick="document.getElementById('zinssatz').value=''"></td></tr>
+  <hr>
+  <input type="button" value="Ausrechnen" onclick="calcZinsen()">
+  <hr>
+  <tr><td><span id="gw">Endkapital</span></td><td><input type="number" step="any" id="endkapital" class="in" readonly=""> €</td><td></td></tr>
+  <tr><td><span id="ge">Gesamte Einzahlungen</span></td><td><input type="number" step="any" id="einzahlungen" class="in" readonly=""> €</td><td></td></tr>
+  <tr><td><span id="ez">Erhaltene Zinszahlungen</span></td><td><input type="number" step="any" id="zinszahlungen" class="in" readonly=""> €</td><td></td></tr>
+  </tbody></table>
+  <br>
 
+  <br>
+  <br>
   </body>
 </html>

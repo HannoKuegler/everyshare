@@ -29,3 +29,29 @@ function del() {
 	document.getElementById("c1").value="";
 	document.getElementById("d1").value="";
 }
+
+function calcZinsen(){
+
+	var kapitalV = parseFloat(document.getElementById("kapital").value);
+	var sparrateV = parseFloat(document.getElementById("sparrate").value);
+	var spardauerV = parseFloat(document.getElementById("spardauer").value);
+	var zinssatzV = parseFloat(document.getElementById("zinssatz").value);
+	if(!kapitalV || !sparrateV || !spardauerV || !zinssatzV){
+		return false;
+	}
+
+
+	var gesamteEinzahlungenV = (spardauerV*12) * sparrateV + kapitalV;
+	document.getElementById("einzahlungen").value = gesamteEinzahlungenV;
+	document.getElementById("einzahlungen").innerHTML = "€";
+
+	var endkapitalV = kapitalV * Math.pow(1+(zinssatzV/100),spardauerV) + (gesamteEinzahlungenV-kapitalV);
+	document.getElementById("endkapital").value = endkapitalV;
+	document.getElementById("endkapital").innerHTML = "€";
+
+	var erhalteneZinszahlungenV = endkapitalV - kapitalV;
+	document.getElementById("zinszahlungen").value = erhalteneZinszahlungenV;
+	document.getElementById("zinszahlungen").innerHTML = "€";
+
+
+}
