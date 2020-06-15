@@ -17,7 +17,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
       <!-- Rendering und Zoom für Mobilgeräte -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Verlinkungen zu eigenen Skript und Stylesheet -->
         <link rel="stylesheet" href="CSS/aktienrechner.css">
@@ -42,11 +42,11 @@
 
 <div class="container-fluid odd">
   <div class="row">
-    <div class="col-md">
+    <div class="col-sm">
       <h5>Aktienrechner</h5>
       <p>Zuverlässige Rechner helfen beim Handeln mit Aktien ungemein. Mit dem <b>Aktienrechner</b> lässt sich Gewinn beziehungsweise Ver lust kinderleicht errechnen. Die Ausgabe erfolgt sowohl in Prozent als auch Absolut. So lässt sich am Besten entscheiden, ob ein Verkauf oder Kauf sinnvoll ist.</p>
     </div>
-    <div class="col-md">
+    <div class="col-sm">
       <table border="0" cellspacing="2" cellpadding="2">
       <tbody><tr><td>Einkaufspreis: </td><td><input type="number" step="any" id="a" class="in"> (€) </td><td><input type="button" class="clear" value="C" onclick="document.getElementById('a').value=''"></td></tr>
       <tr><td>Verkaufspreis: </td><td><input type="number" step="any" id="b" class="in"> (€) </td><td><input type="button" class="clear" value="C" onclick="document.getElementById('b').value=''"></td></tr>
@@ -64,11 +64,11 @@
 
   <div class="container-fluid straight">
     <div class="row">
-      <div class="col-md">
+      <div class="col-sm">
         <h5>Zinsenrechner</h5>
         <p>Im Handel ist das Rechnen, bezogen auf monatliches Ausschüttungsintervall, ebenso wichtig für einen klaren Überblick. Geben Sie Anfangskapital sowie Sparrate, Spardauer und Zinssatz entweder händisch ein, oder nutzen Sie die Pfeiltasten!</p>
       </div>
-      <div class="col-md">
+      <div class="col-sm">
         <table border="0" cellspacing="2" cellpadding="2">
         <tbody><tr><td>Anfangskapital: </td><td><input type="number" step="any" id="kapital" class="input"></td><td><input class="clear" type="button" value="C" onclick="document.getElementById('kapital').value=''"></td></tr>
         <tr><td>Monatliche Sparrate: </td><td><input type="number" step="any" id="sparrate" class="input"></td><td><input class="clear" type="button" value="C" onclick="document.getElementById('sparrate').value=''"></td></tr>
@@ -78,13 +78,13 @@
         <tr><td><span id="ge">Gesamte Einzahlungen</span></td><td><input type="number" step="any" id="einzahlungen" class="input" readonly=""> €</td><td></td></tr>
         <tr><td><span id="ez">Erhaltene Zinszahlungen</span></td><td><input type="number" step="any" id="zinszahlungen" class="input" readonly=""> €</td><td></td></tr>
         </tbody></table>
+        <div style="padding-top: 10px;">
         <input class="operate" type="button" value="Ausrechnen" onclick="calcZinsen()">
         <input class="clear" type="button" value="Löschen" onclick="delZ()">
       </div>
+      </div>
     </div>
   </div>
-
-
   </body>
 
   <!-- Footer -->

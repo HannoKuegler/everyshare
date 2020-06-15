@@ -17,7 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <!-- Rendering und Zoom für Mobilgeräte -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Verlinkungen zu eigenen Skript und Stylesheet -->
     <link rel="stylesheet" href="CSS/portfolio.css">
@@ -46,20 +46,30 @@
   </div>
 
 
-  <div class="container-fluid straight">
+  <div class="container-fluid odd">
     <div class="row">
       <div class="col-sm">
-        <canvas id="worthChart"></canvas>
+        <canvas id="worthChart" style="width: 100%; height: 100%;"></canvas>
       </div>
       <div class="col-sm">
+        <h2>Wert Anzeige</h2>
         <p>Doughnuts sind was tolles. Sie dienen aber auch zum Illustrieren von aktuellen Aktienwerten! <b>Hovern</b> oder <b>drücken</b> Sie auf einen beliebigen <b>Anteil</b> innerhalb des <b>Diagramms</b> um einen solchen Wert anzuzeigen.</p>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <canvas id="difChart"></canvas>
+  <div class="container-fluid straight">
+    <div class="row">
+      <div class="col-sm">
+    <canvas id="difChart" style="width: 100%; height: 100%;"></canvas>
+      </div>
+      <div class="col-sm">
+        <h2>Differenz Anzeige</h2>
+        <p>Nicht nur Doughnuts eignen sich zum Illustrieren. Wieder <b>hovern</b> oder auf beliebigen <b>Anteil drücken</b> um einen Wert anzuzeigen.</p>
+      </div>
+    </div>
   </div>
-<script src="JS/portfolio.js"></script>
+  <script src="JS/portfolio.js"></script>
 </body>
+
 </html>
