@@ -26,7 +26,7 @@
 
   <body>
     <!-- Navigationsleiste -->
-    <nav class="navbar navbar-expand-md navbar-dark py-0 dots">
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark dots">
       <a class="navbar-brand" href="#">
         <img src="graphics/place-holder.png" width="170" height="45" alt="everyshare">
       </a>
@@ -41,6 +41,12 @@
       </div>
   </nav>
 
+  <!-- Header - set the background image for the header in the line below -->
+  <header class="bg-image-full text-center" style="background-image: url('graphics/stock-market.jpg');">
+        <h1 style="padding-right: 500px;">Analysiere,</h1>
+        <h1 style="padding-right: 250px;">taxiere,</h1>
+        <h1>handle</h1>
+  </header>
 
   <!-- First Container -->
   <!-- <div class="container-fluid straight text-center">
@@ -51,15 +57,20 @@
 
 
   <!-- Second Container -->
-  <div class="container-fluid straight text-center">
+  <div class="container-fluid odd text-center">
     <h2 class="margin">Wer macht denn sowas?</h2>
     <div class="row">
-      <div class="col">
+      <div class="col-lg-4">
         <img src="graphics\hanno.png" class="rounded-circle img-fluid" alt="Portrait von Hanno" width="250px" height="250px">
         <h4 style="margin-top: 10px;">&lt;Back-End&gt;</h4>
         <p>Direkt sehen kann man es zwar nicht, aber ohne ihn wäre hier nichts los. Er übernimmt vollste verantwortung für Funktion dieser Webseite!</p>
       </div>
-      <div class="col">
+      <div class="col-lg-4">
+        <img src="graphics\Paul.png" class="rounded-circle img-fluid" alt="Portrait von Paul" width="250px" height="250px">
+        <h4 style="margin-top: 10px;">&lt;Front-End&gt;</h4>
+        <p>Funktionalität zu visualisieren ist seine Arbeit. Schön soll es aussehen, aber auch funktionieren!</p>
+      </div>
+      <div class="col-lg-4">
         <img src="graphics\Paul.png" class="rounded-circle img-fluid" alt="Portrait von Paul" width="250px" height="250px">
         <h4 style="margin-top: 10px;">&lt;Front-End&gt;</h4>
         <p>Funktionalität zu visualisieren ist seine Arbeit. Schön soll es aussehen, aber auch funktionieren!</p>
@@ -68,7 +79,7 @@
   </div>
 
   <!-- Third Container (Grid) -->
-  <div class="container-fluid odd text-center">
+  <div class="container-fluid straight text-center">
     <h3 class="margin">Was finde ich hier?</h3><br>
     <div class="row">
       <div class="col">
