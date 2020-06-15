@@ -52,15 +52,15 @@ function calcZinsen(){
 
 
 	var gesamteEinzahlungenV = (spardauerV*12) * sparrateV + kapitalV;
-	document.getElementById("einzahlungen").value = gesamteEinzahlungenV;
+	document.getElementById("einzahlungen").value = gesamteEinzahlungenV.toFixed(2);
 	document.getElementById("einzahlungen").innerHTML = "€";
 
 	var endkapitalV = kapitalV * Math.pow(1+(zinssatzV/100),spardauerV) + (gesamteEinzahlungenV-kapitalV);
-	document.getElementById("endkapital").value = endkapitalV;
+	document.getElementById("endkapital").value = endkapitalV.toFixed(2);
 	document.getElementById("endkapital").innerHTML = "€";
 
 	var erhalteneZinszahlungenV = endkapitalV - kapitalV;
-	document.getElementById("zinszahlungen").value = erhalteneZinszahlungenV;
+	document.getElementById("zinszahlungen").value = erhalteneZinszahlungenV.toFixed(2);
 	document.getElementById("zinszahlungen").innerHTML = "€";
 
 
