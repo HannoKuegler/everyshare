@@ -1,0 +1,59 @@
+.operate {
+  background: #D4DEED;
+  opacity: 0.7;
+  color: #365281;
+  border: none;
+}
+
+.clear {
+  background: #406098;
+  opacity: 0.7;
+  color: #F1F4F9;
+  border: none;
+}
+
+.in {
+  background:#F1F4F9;
+  border: none;
+  color: #406098;
+  font-weight: 500;
+}
+
+.input {
+  background:#FFFFFF;
+  border: none;
+  color: #406098;
+  font-weight: 500;
+}
+
+input {
+    text-align: right;
+}
+
+.container-fluid {
+  padding: 50px 50px 70px 50px;
+}
+
+.straight {
+  background-color: #F1F4F9;
+  color: #406098;
+}
+.odd {
+  background-color: #FFFFFF;
+  color: #406098;
+}
+
+.navbar.dots .navbar-toggler-icon {
+background-image: url('https://mdbootstrap.com/img/svg/hamburger9.svg?color=f7fbfc');
+background-color: #5277B7;
+}
+
+.navbar {
+  background-color: #5277B7;
+	padding: 0px 0px 0px 9%;
+}
+
+.footer {
+  background-color: #365281;
+  color: #D4DEED;
+}

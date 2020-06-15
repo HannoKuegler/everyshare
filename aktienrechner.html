@@ -1,43 +1,94 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>everyshare</title>
+      <title>Rechner</title>
 
-    <script type="text/javascript" src="JS/aktienrechner.js"></script>
+      <!-- Festlegen eines Browser-Logos -->
+        <link rel="icon" type="image/png" href="graphics/favicon.png">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="graphics/favicon.ico">
 
+      <!-- Festlegen der Unicode-Kodierung -->
+        <meta charset="utf-8">
+
+      <!-- Implementierung von Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+      <!-- Rendering und Zoom für Mobilgeräte -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Verlinkungen zu eigenen Skript und Stylesheet -->
+        <link rel="stylesheet" href="CSS/aktienrechner.css">
+        <script type="text/javascript" src="JS/aktienrechner.js"></script>
   </head>
   <body>
+    <!-- Navigationsleiste -->
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark dots">
+      <a class="navbar-brand" href="index.html">
+        <img src="graphics/place-holder.png" width="170" height="45" alt="everyshare">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="portfolio.html">Portfolio</a>
+          <a class="nav-item nav-link active" href="#">Rechner</a>
+        </div>
+      </div>
+  </nav>
+
+<div class="container-fluid odd">
+  <div class="row">
+    <div class="col-md">
+      <h5>Aktienrechner</h5>
+      <p>Zuverlässige Rechner helfen beim Handeln mit Aktien ungemein. Mit dem <b>Aktienrechner</b> lässt sich Gewinn beziehungsweise Ver lust kinderleicht errechnen. Die Ausgabe erfolgt sowohl in Prozent als auch Absolut. So lässt sich am Besten entscheiden, ob ein Verkauf oder Kauf sinnvoll ist.</p>
+    </div>
+    <div class="col-md">
+      <table border="0" cellspacing="2" cellpadding="2">
+      <tbody><tr><td>Einkaufspreis: </td><td><input type="number" step="any" id="a" class="in"> (€) </td><td><input type="button" class="clear" value="C" onclick="document.getElementById('a').value=''"></td></tr>
+      <tr><td>Verkaufspreis: </td><td><input type="number" step="any" id="b" class="in"> (€) </td><td><input type="button" class="clear" value="C" onclick="document.getElementById('b').value=''"></td></tr>
+      <tr><td><span id="c0">Gewinn</span> in Prozent: </td><td><input type="number" step="any" id="c1" class="in" readonly=""> %</td><td></td></tr>
+      <tr><td><span id="d0">Gewinn</span> absolut: </td><td><input type="number" step="any" id="d1" class="in" readonly=""> (€) </td><td></td></tr>
+      </tbody></table>
+    <div style="padding-top: 10px;">
+      <input class="operate" type="button" value="Ausrechnen" onclick="docalc()">
+      <input class="clear" type="button" value="Löschen" onclick="del()">
+    </div>
+    </div>
+  </div>
+</div>
 
 
-  <h1>Aktienrechner</h1>
-  <table border="0" cellspacing="2" cellpadding="2">
-  <tbody><tr><td>Einkaufspreis: </td><td><input type="number" step="any" id="a" class="in"> (€) </td><td><input type="button" value="C" onclick="document.getElementById('a').value=''"></td></tr>
-  <tr><td>Verkaufspreis: </td><td><input type="number" step="any" id="b" class="in"> (€) </td><td><input type="button" value="C" onclick="document.getElementById('b').value=''"></td></tr>
-  <tr><td><span id="c0">Gewinn</span> in Prozent: </td><td><input type="number" step="any" id="c1" class="in" readonly=""> %</td><td></td></tr>
-  <tr><td><span id="d0">Gewinn</span> absolut: </td><td><input type="number" step="any" id="d1" class="in" readonly=""> (€) </td><td></td></tr>
-  </tbody></table>
-  <br>
-  <input type="button" value="Ausrechnen" onclick="docalc()">
-  <input type="button" value="Löschen" onclick="del()">
-  <br>
-  <br>
-  <h1>Zinsenrechner bezohen auf Monatliches Ausschüttungsintervall</h1>
-  <table border="0" cellspacing="2" cellpadding="2">
-  <tbody><tr><td>Anfangskapital: </td><td><input type="number" step="any" id="kapital" class="in"></td><td><input type="button" value="C" onclick="document.getElementById('kapital').value=''"></td></tr>
-  <tr><td>Monatliche Sparrate: </td><td><input type="number" step="any" id="sparrate" class="in"></td><td><input type="button" value="C" onclick="document.getElementById('sparrate').value=''"></td></tr>
-  <tbody><tr><td>Spardauer in Jahren: </td><td><input type="number" step="any" id="spardauer" class="in"></td><td><input type="button" value="C" onclick="document.getElementById('spardauer').value=''"></td></tr>
-  <tr><td>Jählricher Zinssatz in Prozent: </td><td><input type="number" step="any" id="zinssatz" class="in"></td><td><input type="button" value="C" onclick="document.getElementById('zinssatz').value=''"></td></tr>
-  <hr>
-  <input type="button" value="Ausrechnen" onclick="calcZinsen()">
-  <hr>
-  <tr><td><span id="gw">Endkapital</span></td><td><input type="number" step="any" id="endkapital" class="in" readonly=""> €</td><td></td></tr>
-  <tr><td><span id="ge">Gesamte Einzahlungen</span></td><td><input type="number" step="any" id="einzahlungen" class="in" readonly=""> €</td><td></td></tr>
-  <tr><td><span id="ez">Erhaltene Zinszahlungen</span></td><td><input type="number" step="any" id="zinszahlungen" class="in" readonly=""> €</td><td></td></tr>
-  </tbody></table>
-  <br>
+  <div class="container-fluid straight">
+    <div class="row">
+      <div class="col-md">
+        <h5>Zinsenrechner</h5>
+        <p>Im Handel ist das Rechnen, bezogen auf monatliches Ausschüttungsintervall, ebenso wichtig für einen klaren Überblick. Geben Sie Anfangskapital sowie Sparrate, Spardauer und Zinssatz entweder händisch ein, oder nutzen Sie die Pfeiltasten!</p>
+      </div>
+      <div class="col-md">
+        <table border="0" cellspacing="2" cellpadding="2">
+        <tbody><tr><td>Anfangskapital: </td><td><input type="number" step="any" id="kapital" class="input"></td><td><input class="clear" type="button" value="C" onclick="document.getElementById('kapital').value=''"></td></tr>
+        <tr><td>Monatliche Sparrate: </td><td><input type="number" step="any" id="sparrate" class="input"></td><td><input class="clear" type="button" value="C" onclick="document.getElementById('sparrate').value=''"></td></tr>
+        <tbody><tr><td>Spardauer in Jahren: </td><td><input type="number" step="any" id="spardauer" class="input"></td><td><input class="clear" type="button" value="C" onclick="document.getElementById('spardauer').value=''"></td></tr>
+        <tr><td>Jählricher Zinssatz in Prozent: </td><td><input type="number" step="any" id="zinssatz" class="input"></td><td><input class="clear" type="button" value="C" onclick="document.getElementById('zinssatz').value=''"></td></tr>
+        <tr><td><span id="gw">Endkapital</span></td><td><input type="number" step="any" id="endkapital" class="input" readonly=""> €</td><td></td></tr>
+        <tr><td><span id="ge">Gesamte Einzahlungen</span></td><td><input type="number" step="any" id="einzahlungen" class="input" readonly=""> €</td><td></td></tr>
+        <tr><td><span id="ez">Erhaltene Zinszahlungen</span></td><td><input type="number" step="any" id="zinszahlungen" class="input" readonly=""> €</td><td></td></tr>
+        </tbody></table>
+        <input class="operate" type="button" value="Ausrechnen" onclick="calcZinsen()">
+      </div>
+    </div>
+  </div>
 
-  <br>
-  <br>
+
   </body>
+
+  <!-- Footer -->
+  <footer class="container-fluid footer text-center">
+    <p>Hanno Kügler, Paul Kleinlercher © 2020</p>
+  </footer>
+
 </html>
