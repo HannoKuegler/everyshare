@@ -30,6 +30,16 @@ function del() {
 	document.getElementById("d1").value="";
 }
 
+function delZ() {
+	document.getElementById("kapital").value = "";
+	document.getElementById("sparrate").value = "";
+	document.getElementById("spardauer").value = "";
+	document.getElementById("zinssatz").value = "";
+	document.getElementById("zinszahlungen").value = "";
+	document.getElementById("endkapital").value = "";
+	document.getElementById("einzahlungen").value = "";
+}
+
 function calcZinsen(){
 
 	var kapitalV = parseFloat(document.getElementById("kapital").value);
